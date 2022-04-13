@@ -1,22 +1,69 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Not_achieved_task;
+use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
+/**
+ * 表示のテスト
+ */
 Route::get('ta', function () {
     return '<html><body><h1>task</h1></body></html>';
 });
+
+/**
+ * 登録画面
+ */
+Route::get('/', function () {
+    return view('layouts.register');
+});
+
+/**
+ * 登録処理
+ */
+Route::post('/tasks', function (Request $request) {
+    //
+});
+
+/**
+ * タスクの削除
+ */
+Route::delete('/task/{task}', function (Not_achieved_task $not_achieved_task) {
+    //
+});
+
+/**
+ * 未達成タスクの表示画面
+ */
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+
+/**
+ * 編集画面
+ */
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+
+/**
+ * 編集処理
+ */
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+
+/**
+ * 達成タスクの表示画面
+ */
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
