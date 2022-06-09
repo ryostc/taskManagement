@@ -15,7 +15,6 @@
 <body>
     <div class="container">
         <h1>@yield('heading')</h1>
-        <p>@yield('errors')</p>
         <div class="content">
             @yield('content')
         </div>

@@ -14,16 +14,12 @@ Route::get('ta', function () {
 /**
  * 登録画面
  */
-Route::get('/', function () {
-    return view('layouts.register');
-});
+Route::get('/', 'App\Http\Controllers\Controller@registerShow');
 
 /**
  * 登録処理
  */
-Route::post('/tasks', function (Request $request) {
-    //
-});
+Route::post('/register', 'App\Http\Controllers\Controller@register');
 
 /**
  * タスクの削除
